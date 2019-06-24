@@ -66,22 +66,27 @@ public class MenuUsuario extends javax.swing.JFrame {
         frameAPuesto.setLocationRelativeTo(null);
         frameAServicio.setLocationRelativeTo(null);
         frameACita.setLocationRelativeTo(null);
-        panelAMascota.setVisible(false);
-        panelCMascota.setVisible(false);
-        panelACliente.setVisible(false);
-        panelCCliente.setVisible(false);
-        panelMCliente.setVisible(false);
-        panelMMascota.setVisible(false);
-        panelACita.setVisible(false);
-        panelCCita.setVisible(false);
-        panelCTratamiento.setVisible(false);
-        panelCMedicamento.setVisible(false);
-        panelCServicio.setVisible(false);
-        panelCPuesto.setVisible(false);
-        panelMEmpleado.setVisible(false);
-        panelCEmpleado.setVisible(false);
+        paneles(false);
         comboConsulta();
         btnActive();
+    }
+    
+    public void paneles(boolean bandera){
+        
+        panelAMascota.setVisible(bandera);
+        panelCMascota.setVisible(bandera);
+        panelACliente.setVisible(bandera);
+        panelCCliente.setVisible(bandera);
+        panelMCliente.setVisible(bandera);
+        panelMMascota.setVisible(bandera);
+        panelACita.setVisible(bandera);
+        panelCCita.setVisible(bandera);
+        panelCTratamiento.setVisible(bandera);
+        panelCMedicamento.setVisible(bandera);
+        panelCServicio.setVisible(bandera);
+        panelCPuesto.setVisible(bandera);
+        panelMEmpleado.setVisible(bandera);
+        panelCEmpleado.setVisible(bandera);
     }
     
     public void comboConsulta(){
@@ -1053,7 +1058,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         frameAPuesto.getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 200));
 
         frameCalendario.setMinimumSize(new java.awt.Dimension(445, 350));
-        frameCalendario.setPreferredSize(new java.awt.Dimension(445, 350));
         frameCalendario.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelCalendar.setMinimumSize(new java.awt.Dimension(445, 350));
@@ -1074,12 +1078,15 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         frameCalendario.getContentPane().add(jPanelCalendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 360));
 
+        frameVentas.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        frameVentas.setUndecorated(true);
+        frameVentas.setSize(new java.awt.Dimension(830, 450));
         frameVentas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel11.setBackground(new java.awt.Color(236, 244, 227));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 188, 156)));
-        jPanel11.setMaximumSize(new java.awt.Dimension(572, 385));
-        jPanel11.setMinimumSize(new java.awt.Dimension(572, 385));
+        jPanel11.setMaximumSize(new java.awt.Dimension(830, 450));
+        jPanel11.setMinimumSize(new java.awt.Dimension(830, 450));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pestaña10.setBackground(new java.awt.Color(255, 255, 255));
@@ -2949,6 +2956,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel1.add(labMEmpleado);
         labMEmpleado.setBounds(-180, 150, 180, 60);
 
+        jButton1.setBackground(new java.awt.Color(26, 188, 156));
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Venta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3139,18 +3149,18 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void AMCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AMCerrarMouseClicked
         // TODO add your handling code here:
-        
         panelAMascota.setVisible(false);
     }//GEN-LAST:event_AMCerrarMouseClicked
 
     private void labAMascotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labAMascotaMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelAMascota.setVisible(true);
     }//GEN-LAST:event_labAMascotaMouseClicked
 
     private void labAClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labAClienteMouseClicked
         // TODO add your handling code here:
+        paneles(false);
         panelACliente.setVisible(true);
     }//GEN-LAST:event_labAClienteMouseClicked
 
@@ -3161,6 +3171,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labCMascotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCMascotaMouseClicked
         // TODO add your handling code here:
+        paneles(false);
         panelCMascota.setVisible(true);
     }//GEN-LAST:event_labCMascotaMouseClicked
 
@@ -3187,7 +3198,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labCClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCClienteMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCCliente.setVisible(true);
         //panelCCliente.preferredSize();
     }//GEN-LAST:event_labCClienteMouseClicked
@@ -3200,6 +3211,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labMClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labMClienteMouseClicked
         // TODO add your handling code here:
+        paneles(false);
         panelMCliente.setVisible(true);
     }//GEN-LAST:event_labMClienteMouseClicked
 
@@ -3210,7 +3222,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labMMascotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labMMascotaMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelMMascota.setVisible(true);
     }//GEN-LAST:event_labMMascotaMouseClicked
 
@@ -3227,13 +3239,14 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labACitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labACitasMouseClicked
         // TODO add your handling code here:
+        paneles(false);
         empleadohash();
         panelACita.setVisible(true);
     }//GEN-LAST:event_labACitasMouseClicked
 
     private void labCCitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCCitasMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCCita.setVisible(true);
     }//GEN-LAST:event_labCCitasMouseClicked
 
@@ -3245,7 +3258,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labCTratamientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCTratamientoMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCTratamiento.setVisible(true);
     }//GEN-LAST:event_labCTratamientoMouseClicked
 
@@ -3303,19 +3316,19 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labCPuestosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCPuestosMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCPuesto.setVisible(true);
     }//GEN-LAST:event_labCPuestosMouseClicked
 
     private void labCEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCEmpleadoMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCEmpleado.setVisible(true);
     }//GEN-LAST:event_labCEmpleadoMouseClicked
 
     private void labMEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labMEmpleadoMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelMEmpleado.setVisible(true);
     }//GEN-LAST:event_labMEmpleadoMouseClicked
 
@@ -3361,7 +3374,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labCMedicamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCMedicamentoMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCMedicamento.setVisible(true);
     }//GEN-LAST:event_labCMedicamentoMouseClicked
 
@@ -3401,7 +3414,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labCServicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labCServicioMouseClicked
         // TODO add your handling code here:
-        
+        paneles(false);
         panelCServicio.setVisible(true);
     }//GEN-LAST:event_labCServicioMouseClicked
 
@@ -4564,6 +4577,11 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void labMaximizar10labMaximizar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labMaximizar10labMaximizar1MouseClicked
         // TODO add your handling code here:
+        int dialog = JOptionPane.showConfirmDialog(null, "Deceas cerrar la ventana?", "Salir",  JOptionPane.YES_NO_OPTION);
+        if( dialog == 0 ){
+
+            frameVentas.dispose();
+        }
     }//GEN-LAST:event_labMaximizar10labMaximizar1MouseClicked
 
     private void labMaximizar10labMaximizar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labMaximizar10labMaximizar1MouseEntered
@@ -4591,6 +4609,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         frameVentas.setVisible(true);
+        frameVentas.setLocationRelativeTo(this);
         serviciohash();
         tratamientohash();
         medicamentohash();
